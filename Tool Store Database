@@ -1,0 +1,23 @@
+CREATE TABLE tools (id INTEGER PRIMARY KEY, name TEXT, price INTEGER,weight INTEGER, color TEXT);
+
+INSERT INTO tools VALUES (1,"drill",209,5,"red");
+INSERT INTO tools VALUES (2,"screw driver",15,9,"blue");
+INSERT INTO tools VALUES (3,"saw",350,23,"silver");
+INSERT INTO tools VALUES (4,"cup",10,2,"green");
+INSERT INTO tools VALUES (5,"phone",1000,8,"red");
+INSERT INTO tools VALUES (6,"tape",6,3,"red");
+INSERT INTO tools VALUES (7,"knife",18,4,"orange");
+INSERT INTO tools VALUES (8,"drill stand",135,54,"yellow");
+SELECT * FROM tools;
+
+--WHAT IS THE AVERAGE PRICE OF TOOLS IN THIS STORE?
+SELECT AVG(price) FROM tools ;
+
+--WHAT IS THE MAX WEIGHT OF TOOLS IN THIS STORE?
+SELECT MAX(weight) FROM tools;
+
+--WHAT TOOLS ARE PRICED UNDER $75?
+SELECT * FROM tools where price <75 ORDER BY weight ;
+
+--WHAT RED TOOLS DO YOU HAVE IN THIS STORE?
+SELECT * from tools where color ='red' order by weight ;
